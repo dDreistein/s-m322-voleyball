@@ -24,9 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className={`${inter.variable} ${nunito.variable} h-full`}
-    >
-      <body className="min-h-full">{children}</body>
+    <html lang="de" className={`${inter.variable} ${nunito.variable} h-full`}>
+      <body className="min-h-full font-sans text-[color:var(--ink)] bg-[color:var(--cool-gray)] leading-[1.7]">
+        {children}
+      </body>
     </html>
   );
 }

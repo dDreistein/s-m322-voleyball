@@ -42,26 +42,36 @@ export default function SpielplanPage() {
   );
 
   return (
-    <div className="site-shell">
+    <div className="mx-auto max-w-[1240px] p-6 max-[640px]:p-3.5">
       <Topbar activeHref="/spielplan" />
 
       <main>
-        <section className="content-section">
-          <div className="section-head">
-            <p className="section-label">Spielplan</p>
-            <h1 className="page-title">Kommende Spiele</h1>
-            <p>
+        <section className="mt-14 rounded-[20px] border border-[color:var(--border)] bg-[color:var(--panel)] p-7 shadow-[0_10px_26px_rgba(43,108,176,0.08)]">
+          <div className="mb-4.5">
+            <p className="m-0 text-xs font-bold uppercase tracking-[0.08em] text-[color:var(--orange)]">
+              Spielplan
+            </p>
+            <h1 className="mt-2 font-display text-[clamp(2.25rem,4.5vw,3rem)] leading-[1.1] text-[color:var(--deep)]">
+              Kommende Spiele
+            </h1>
+            <p className="mt-3 text-[color:var(--muted)]">
               Datum, Zeit, Ort und Gegner auf einen Blick. Filter, Anfahrt und
               Kalender sind direkt dabei.
             </p>
           </div>
 
-          <div className="filter-row" role="tablist" aria-label="Filter nach Team">
+          <div
+            className="mb-4.5 flex flex-wrap gap-2.5"
+            role="tablist"
+            aria-label="Filter nach Team"
+          >
             {filters.map((filter) => (
               <button
                 key={filter.id}
-                className={`filter-chip${
-                  activeFilter === filter.id ? " is-active" : ""
+                className={`rounded-full border px-3.5 py-2 font-bold text-[color:var(--deep)] transition hover:-translate-y-0.5 ${
+                  activeFilter === filter.id
+                    ? "border-[color:var(--deep)] bg-[color:var(--deep)] text-[color:var(--white)]"
+                    : "border-[color:var(--deep)] bg-[color:var(--white)] text-[color:var(--deep)]"
                 }`}
                 onClick={() => setActiveFilter(filter.id)}
                 type="button"
@@ -71,24 +81,32 @@ export default function SpielplanPage() {
             ))}
           </div>
 
-          <div className="card-grid schedule-grid">
+          <div className="grid gap-4.5 min-[981px]:grid-cols-3">
             {visibleItems.map((item) => (
               <article
                 key={`${item.team}-${item.time}`}
-                className="info-card schedule-card"
+                className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--white)] p-6 transition hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(31,95,107,0.1)]"
                 data-team={item.team}
               >
-                <p className="card-kicker">{item.label}</p>
-                <h3>{item.time}</h3>
+                <p className="m-0 text-xs font-bold uppercase tracking-[0.08em] text-[color:var(--orange)]">
+                  {item.label}
+                </p>
+                <h3 className="mt-2 font-display text-[1.5rem] text-[color:var(--deep)]">
+                  {item.time}
+                </h3>
                 <p>
                   <strong>Ort:</strong> {item.location}
                 </p>
                 <p>
                   <strong>Gegner:</strong> {item.opponent}
                 </p>
-                <div className="tags">
-                  <span>Anfahrt</span>
-                  <span>Kalender hinzufügen</span>
+                <div className="mt-7 flex flex-wrap gap-2.5">
+                  <span className="inline-flex min-h-[32px] items-center rounded-full bg-[rgba(99,179,237,0.18)] px-3.5 text-sm font-bold text-[color:var(--deep)]">
+                    Anfahrt
+                  </span>
+                  <span className="inline-flex min-h-[32px] items-center rounded-full bg-[rgba(99,179,237,0.18)] px-3.5 text-sm font-bold text-[color:var(--deep)]">
+                    Kalender hinzufügen
+                  </span>
                 </div>
               </article>
             ))}
