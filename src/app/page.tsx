@@ -1,64 +1,168 @@
-import Image from "next/image";
+import Topbar from "@/app/components/Topbar";
+import SiteFooter from "@/app/components/SiteFooter";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="site-shell">
+      <Topbar activeHref="/" />
+
+      <main>
+        <section className="hero">
+          <div className="hero-copy">
+            <p className="section-label">Startseite</p>
+            <h1>Spielinfos, Anmeldung, Teamgeist - alles auf einen Blick.</h1>
+            <p className="lead">
+              Du willst spielen? Hier findest du das nächste Match, die letzten
+              Resultate und den schnellsten Weg zur Mitgliedschaft. Klar, direkt
+              und mobil optimiert.
+            </p>
+
+            <div
+              className="hero-facts two-cards"
+              aria-label="Letztes Resultat und nächstes Spiel"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              <article className="mini-card highlight">
+                <p className="card-kicker">Letztes Resultat</p>
+                <h3>Alpenstadt vs. VC Luzern 3:1</h3>
+                <p>Sätze: 25:19, 22:25, 25:18, 25:21</p>
+                <p className="result-meta">Sieg zuhause</p>
+              </article>
+              <article className="mini-card">
+                <p className="card-kicker">Nächstes Spiel</p>
+                <h3>Sa, 15:00 Uhr - Team West</h3>
+                <p>Sporthalle A, Alpenstadt</p>
+                <a className="text-link" href="/spielplan">
+                  Anfahrt und Kalender
+                </a>
+              </article>
+            </div>
+
+            <div className="stats-row" aria-label="Club-Kennzahlen">
+              <div className="stat-pill">
+                <strong>40+</strong>
+                <span>Aktive Spielerinnen und Spieler</span>
+              </div>
+              <div className="stat-pill">
+                <strong>3 Teams</strong>
+                <span>Von U16 bis 1. Team</span>
+              </div>
+              <div className="stat-pill">
+                <strong>48h</strong>
+                <span>Antwort auf Anfragen</span>
+              </div>
+            </div>
+
+            <div className="cta-row">
+              <a className="button button-primary" href="/kontakt">
+                Mitgliedschaft starten
+              </a>
+              <a className="button button-secondary" href="/spielplan">
+                Spielplan
+              </a>
+              <a className="button button-secondary" href="/resultate">
+                Resultate
+              </a>
+            </div>
+
+            <div className="quick-access" aria-label="Direktlinks">
+              <a href="/spielplan">Spielplan</a>
+              <a href="/resultate">Resultate</a>
+              <a href="/tabelle">Rangliste</a>
+            </div>
+          </div>
+
+          <figure className="hero-media">
+            <img
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.britannica.com%2F81%2F198481-050-10CED2D9%2FGilberto-Godoy-Filho-ball-Brazil-Argentina-volleyball-2007.jpg&f=1&nofb=1&ipt=d333d6780063a470e4c18927fff94594ba72c04cc34f928a21c4546e16604dd9"
+              alt="Libero in Abwehrhaltung beim Heimspiel in einer Halle."
             />
-            Deploy Now
+            <figcaption>Heimspiel-Moment aus der letzten Saison.</figcaption>
+          </figure>
+        </section>
+
+        <section className="content-section">
+          <div className="section-head">
+            <p className="section-label">Anmeldung</p>
+            <h2>In drei Schritten zum Probetraining</h2>
+            <p>
+              Wir melden uns innert 48 Stunden mit einem konkreten Termin. Du
+              weisst immer, was als nächstes passiert.
+            </p>
+          </div>
+          <div className="card-grid three-up">
+            <article className="info-card accent sand">
+              <h3>1. Kurzes Formular</h3>
+              <p>Trag Name, Kontakt und Position ein. Mehr brauchst du nicht.</p>
+            </article>
+            <article className="info-card accent sky">
+              <h3>2. Team-Zuordnung</h3>
+              <p>
+                Wir klären Level und Verfügbarkeit und schlagen dir das passende
+                Team vor.
+              </p>
+            </article>
+            <article className="info-card accent coral">
+              <h3>3. Probetraining</h3>
+              <p>
+                Du trainierst mit, lernst die Mannschaft kennen und entscheidest
+                danach.
+              </p>
+            </article>
+          </div>
+          <a className="text-link" href="/kontakt">
+            Jetzt Mitgliedschaft starten
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        </section>
+
+        <section className="content-section">
+          <div className="section-head">
+            <p className="section-label">News</p>
+            <h2>Aktuell aus der Halle</h2>
+            <p>Kurze Updates statt langer Texte. Das Wichtigste auf dem Handy.</p>
+          </div>
+          <div className="card-grid two-up">
+            <article className="info-card">
+              <h3>Saisonstart am 10. September</h3>
+              <p>
+                Das 1. Team startet zuhause gegen Team West. Einlauf mit der U16
+                und Hallenmusik.
+              </p>
+            </article>
+            <article className="info-card">
+              <h3>Libero-Workshop mit Andrin Wirz</h3>
+              <p>
+                Offenes Training für Studierende am 5. Oktober. Fokus: Annahme
+                und Feldverteidigung.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section className="content-section">
+          <div className="section-head">
+            <p className="section-label">Reputation</p>
+            <h2>Wofür der Club steht</h2>
+            <p>Leistung, Fairness und ein Team, das dich wirklich aufnimmt.</p>
+          </div>
+          <div className="card-grid two-up">
+            <article className="info-card">
+              <h3>Top 3 in der 2. Liga</h3>
+              <p>
+                Seit drei Jahren konstant in der Spitzengruppe mit eigener
+                Nachwuchsförderung.
+              </p>
+            </article>
+            <article className="info-card">
+              <h3>40+ aktive Spieler:innen</h3>
+              <p>
+                Von U16 bis 1. Team: klare Rollen, kurze Wege, respektvoller
+                Umgang.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <SiteFooter />
       </main>
     </div>
   );
