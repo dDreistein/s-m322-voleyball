@@ -67,15 +67,15 @@ export default function Home() {
                 <strong className="block font-display text-[1.3rem] text-(--deep)">
                   3 Teams
                 </strong>
-                <span className="mt-1.5 block text-[color:var(--muted)]">
+                <span className="mt-1.5 block text-(--muted)">
                   Von U16 bis 1. Team
                 </span>
               </div>
               <div className="rounded-[18px] bg-[#eef6f5] p-4.5">
-                <strong className="block font-display text-[1.3rem] text-[color:var(--deep)]">
+                <strong className="block font-display text-[1.3rem] text-(--deep)">
                   48h
                 </strong>
-                <span className="mt-1.5 block text-[color:var(--muted)]">
+                <span className="mt-1.5 block text-(--muted)">
                   Antwort auf Anfragen
                 </span>
               </div>
@@ -83,19 +83,19 @@ export default function Home() {
 
             <div className="mt-7 flex flex-wrap gap-3.5">
               <a
-                className="inline-flex min-h-[52px] items-center justify-center rounded-lg bg-[color:var(--orange)] px-6 py-3 font-bold text-[color:var(--white)] transition hover:-translate-y-0.5 hover:bg-[color:var(--orange-dark)]"
+                className="inline-flex min-h-13 items-center justify-center rounded-lg bg-(--orange) px-6 py-3 font-bold text-(--white) transition hover:-translate-y-0.5 hover:bg-(--orange-dark)"
                 href="/kontakt"
               >
                 Mitgliedschaft starten
               </a>
               <a
-                className="inline-flex min-h-[52px] items-center justify-center rounded-lg border border-[color:var(--deep)] px-6 py-3 font-bold text-[color:var(--deep)] transition hover:-translate-y-0.5 hover:bg-[rgba(99,179,237,0.18)]"
+                className="inline-flex min-h-13 items-center justify-center rounded-lg border border-(--deep) px-6 py-3 font-bold text-(--deep) transition hover:-translate-y-0.5 hover:bg-[rgba(99,179,237,0.18)]"
                 href="/spielplan"
               >
                 Spielplan
               </a>
               <a
-                className="inline-flex min-h-[52px] items-center justify-center rounded-lg border border-[color:var(--deep)] px-6 py-3 font-bold text-[color:var(--deep)] transition hover:-translate-y-0.5 hover:bg-[rgba(99,179,237,0.18)]"
+                className="inline-flex min-h-13 items-center justify-center rounded-lg border border-(--deep) px-6 py-3 font-bold text-(--deep) transition hover:-translate-y-0.5 hover:bg-[rgba(99,179,237,0.18)]"
                 href="/resultate"
               >
                 Resultate
@@ -104,19 +104,19 @@ export default function Home() {
 
             <div className="mt-4.5 flex flex-wrap gap-2.5" aria-label="Direktlinks">
               <a
-                className="rounded-full bg-[#e2e8f0] px-3.5 py-2 font-bold text-[color:var(--deep)]"
+                className="rounded-full bg-[#e2e8f0] px-3.5 py-2 font-bold text-(--deep)"
                 href="/spielplan"
               >
                 Spielplan
               </a>
               <a
-                className="rounded-full bg-[#e2e8f0] px-3.5 py-2 font-bold text-[color:var(--deep)]"
+                className="rounded-full bg-[#e2e8f0] px-3.5 py-2 font-bold text-(--deep)"
                 href="/resultate"
               >
                 Resultate
               </a>
               <a
-                className="rounded-full bg-[#e2e8f0] px-3.5 py-2 font-bold text-[color:var(--deep)]"
+                className="rounded-full bg-[#e2e8f0] px-3.5 py-2 font-bold text-(--deep)"
                 href="/tabelle"
               >
                 Rangliste
@@ -126,36 +126,36 @@ export default function Home() {
 
           <figure className="m-0 grid gap-3.5">
             <img
-              className="h-full min-h-105 w-full rounded-2xl object-cover shadow-[0_12px_24px_rgba(43,108,176,0.16)] max-[980px]:min-h-[320px]"
+              className="h-full min-h-105 w-full rounded-2xl object-cover shadow-[0_12px_24px_rgba(43,108,176,0.16)] max-[980px]:min-h-80"
               src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.britannica.com%2F81%2F198481-050-10CED2D9%2FGilberto-Godoy-Filho-ball-Brazil-Argentina-volleyball-2007.jpg&f=1&nofb=1&ipt=d333d6780063a470e4c18927fff94594ba72c04cc34f928a21c4546e16604dd9"
               alt="Libero in Abwehrhaltung beim Heimspiel in einer Halle."
             />
-            <figcaption className="text-[0.95rem] text-[color:var(--muted)]">
+            <figcaption className="text-[0.95rem] text-(--muted)">
               Heimspiel-Moment aus der letzten Saison.
             </figcaption>
           </figure>
         </section>
-        <section className="mt-14 rounded-[20px] border border-[color:var(--border)] bg-[color:var(--panel)] p-7 shadow-[0_10px_26px_rgba(43,108,176,0.08)]">
+        <section className="mt-14 rounded-[20px] border border-(--border) bg-(--panel) p-7 shadow-[0_10px_26px_rgba(43,108,176,0.08)]">
           <div className="mb-4.5">
-            <p className="m-0 text-xs font-bold uppercase tracking-[0.08em] text-[color:var(--orange)]">
+            <p className="m-0 text-xs font-bold uppercase tracking-[0.08em] text-(--orange)">
               Anmeldung
             </p>
-            <h2 className="mt-1 font-display text-[clamp(1.5rem,3vw,1.75rem)] text-[color:var(--deep)]">
+            <h2 className="mt-1 font-display text-[clamp(1.5rem,3vw,1.75rem)] text-(--deep)">
               In drei Schritten zum Probetraining
             </h2>
-            <p className="mt-3 text-[color:var(--muted)]">
+            <p className="mt-3 text-(--muted)">
               Wir melden uns innert 48 Stunden mit einem konkreten Termin. Du
               weisst immer, was als nächstes passiert.
             </p>
           </div>
           <div className="grid gap-4.5 min-[981px]:grid-cols-3">
-            <article className="rounded-2xl border border-[color:var(--border)] bg-[#f8fafc] p-6 transition hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(31,95,107,0.1)]">
-              <h3 className="font-display text-[1.5rem] text-[color:var(--deep)]">
+            <article className="rounded-2xl border border-(--border) bg-[#f8fafc] p-6 transition hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(31,95,107,0.1)]">
+              <h3 className="font-display text-[1.5rem] text-(--deep)">
                 1. Kurzes Formular
               </h3>
               <p>Trag Name, Kontakt und Position ein. Mehr brauchst du nicht.</p>
             </article>
-            <article className="rounded-2xl border border-[color:var(--border)] bg-[#eff6ff] p-6 transition hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(31,95,107,0.1)]">
+            <article className="rounded-2xl border border-(--border) bg-[#eff6ff] p-6 transition hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(31,95,107,0.1)]">
               <h3 className="font-display text-[1.5rem] text-(--deep)">
                 2. Team-Zuordnung
               </h3>
@@ -164,8 +164,8 @@ export default function Home() {
                 Team vor.
               </p>
             </article>
-            <article className="rounded-2xl border border-[color:var(--border)] bg-[#fff1f2] p-6 transition hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(31,95,107,0.1)]">
-              <h3 className="font-display text-[1.5rem] text-[color:var(--deep)]">
+            <article className="rounded-2xl border border-(--border) bg-[#fff1f2] p-6 transition hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(31,95,107,0.1)]">
+              <h3 className="font-display text-[1.5rem] text-(--deep)">
                 3. Probetraining
               </h3>
               <p>
@@ -175,27 +175,27 @@ export default function Home() {
             </article>
           </div>
           <a
-            className="mt-4.5 inline-block border-b-2 border-b-[rgba(43,108,176,0.25)] font-bold text-[color:var(--deep)] transition hover:-translate-y-0.5"
+            className="mt-4.5 inline-block border-b-2 border-b-[rgba(43,108,176,0.25)] font-bold text-(--deep) transition hover:-translate-y-0.5"
             href="/kontakt"
           >
             Jetzt Mitgliedschaft starten
           </a>
         </section>
-        <section className="mt-14 rounded-[20px] border border-[color:var(--border)] bg-[color:var(--panel)] p-7 shadow-[0_10px_26px_rgba(43,108,176,0.08)]">
+        <section className="mt-14 rounded-[20px] border border-(--border) bg-(--panel) p-7 shadow-[0_10px_26px_rgba(43,108,176,0.08)]">
           <div className="mb-4.5">
-            <p className="m-0 text-xs font-bold uppercase tracking-[0.08em] text-[color:var(--orange)]">
+            <p className="m-0 text-xs font-bold uppercase tracking-[0.08em] text-(--orange)">
               Reputation
             </p>
-            <h2 className="mt-1 font-display text-[clamp(1.5rem,3vw,1.75rem)] text-[color:var(--deep)]">
+            <h2 className="mt-1 font-display text-[clamp(1.5rem,3vw,1.75rem)] text-(--deep)">
               Wofür der Club steht
             </h2>
-            <p className="mt-3 text-[color:var(--muted)]">
+            <p className="mt-3 text-(--muted)">
               Leistung, Fairness und ein Team, das dich wirklich aufnimmt.
             </p>
           </div>
           <div className="grid gap-4.5 min-[981px]:grid-cols-2">
-            <article className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--white)] p-6 transition hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(31,95,107,0.1)]">
-              <h3 className="font-display text-[1.5rem] text-[color:var(--deep)]">
+            <article className="rounded-2xl border border-(--border) bg-(--white) p-6 transition hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(31,95,107,0.1)]">
+              <h3 className="font-display text-[1.5rem] text-(--deep)">
                 Top 3 in der 2. Liga
               </h3>
               <p>
@@ -203,8 +203,8 @@ export default function Home() {
                 Nachwuchsförderung.
               </p>
             </article>
-            <article className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--white)] p-6 transition hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(31,95,107,0.1)]">
-              <h3 className="font-display text-[1.5rem] text-[color:var(--deep)]">
+            <article className="rounded-2xl border border-(--border) bg-(--white) p-6 transition hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(31,95,107,0.1)]">
+              <h3 className="font-display text-[1.5rem] text-(--deep)">
                 40+ aktive Spieler:innen
               </h3>
               <p>
