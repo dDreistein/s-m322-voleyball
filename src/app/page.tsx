@@ -80,48 +80,47 @@ export default function Home() {
                 </span>
               </div>
             </div>
-
-            <div className="mt-7 flex flex-wrap gap-3.5">
-              <a
-                className="inline-flex min-h-13 items-center justify-center rounded-lg bg-(--orange) px-6 py-3 font-bold text-(--white) transition hover:-translate-y-0.5 hover:bg-(--orange-dark)"
-                href="/kontakt"
-              >
-                Mitgliedschaft starten
-              </a>
-              <a
-                className="inline-flex min-h-13 items-center justify-center rounded-lg border border-(--deep) px-6 py-3 font-bold text-(--deep) transition hover:-translate-y-0.5 hover:bg-[rgba(99,179,237,0.18)]"
-                href="/spielplan"
-              >
-                Spielplan
-              </a>
-              <a
-                className="inline-flex min-h-13 items-center justify-center rounded-lg border border-(--deep) px-6 py-3 font-bold text-(--deep) transition hover:-translate-y-0.5 hover:bg-[rgba(99,179,237,0.18)]"
-                href="/resultate"
-              >
-                Resultate
-              </a>
-            </div>
-
             <div className="mt-4.5 flex flex-wrap gap-2.5" aria-label="Direktlinks">
               <a
-                className="rounded-full bg-[#e2e8f0] px-3.5 py-2 font-bold text-(--deep)"
+                className="rounded-full bg-(--orange) px-4.5 py-2.5 font-bold text-white shadow-[0_4px_12px_rgba(249,115,22,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_6px_16px_rgba(249,115,22,0.35)]"
                 href="/spielplan"
               >
                 Spielplan
               </a>
               <a
-                className="rounded-full bg-[#e2e8f0] px-3.5 py-2 font-bold text-(--deep)"
+                className="rounded-full bg-(--orange) px-4.5 py-2.5 font-bold text-white shadow-[0_4px_12px_rgba(249,115,22,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_6px_16px_rgba(249,115,22,0.35)]"
                 href="/resultate"
               >
                 Resultate
               </a>
               <a
-                className="rounded-full bg-[#e2e8f0] px-3.5 py-2 font-bold text-(--deep)"
+                className="rounded-full bg-(--orange) px-4.5 py-2.5 font-bold text-white shadow-[0_4px_12px_rgba(249,115,22,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_6px_16px_rgba(249,115,22,0.35)]"
                 href="/tabelle"
               >
                 Rangliste
               </a>
             </div>
+
+            <a
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-(--deep) px-6 py-3 font-bold text-white shadow-[0_6px_16px_rgba(43,108,176,0.3)] transition hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(43,108,176,0.4)]"
+              href="/kontakt"
+            >
+              Probetraining anfragen
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
           </div>
 
           <figure className="m-0 grid gap-3.5">
